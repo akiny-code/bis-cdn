@@ -21,6 +21,7 @@ fs.writeFileSync(dir + '/style.css', `.pi{
 mask-position: center;
 -webkit-mask-repeat: no-repeat;
 mask-repeat: no-repeat;
+display: inline-block;
 }
 .pi::before {
 content: "\\25A2";
