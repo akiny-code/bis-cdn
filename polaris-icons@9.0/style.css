@@ -1,12 +1,13 @@
 .pi{
 -webkit-mask-position: center;
 mask-position: center;
-font-family: serif;
 }
 .pi::before {
 content: "\25A2";
 background: currentColor;
 line-height: 1;
+font-family: serif;
+font-style: normal;
 }
 .pi-adjust{
 -webkit-mask-image: url(AdjustIcon.svg);

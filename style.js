@@ -20,12 +20,13 @@ mask-image: url(${name});
 fs.writeFileSync(dir + '/style.css', `.${pi}{
 -webkit-mask-position: center;
 mask-position: center;
-font-family: serif;
 }
 .${pi}::before {
 content: "\\25A2";
 background: currentColor;
 line-height: 1;
+font-family: serif;
+font-style: normal;
 }
 ${styles.join('\n')}
 `)
