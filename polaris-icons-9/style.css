@@ -1,6 +1,8 @@
 .pi{
 -webkit-mask-position: center;
 mask-position: center;
+-webkit-mask-repeat: no-repeat;
+mask-repeat: no-repeat;
 }
 .pi::before {
 content: "\25A2";
