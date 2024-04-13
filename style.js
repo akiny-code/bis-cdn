@@ -1,5 +1,5 @@
 const fs = require('fs')
-const dir = process.argv[2] ?? 'polaris-icons@9'
+const dir = process.argv[2] ?? 'polaris-icons@9.0.0'
 const pi = process.argv[3] ?? 'pi'
 
 const styles = fs.readdirSync(dir).filter(name => {
@@ -8,7 +8,7 @@ const styles = fs.readdirSync(dir).filter(name => {
     let path = `${dir}/${name}`
     fs.writeFileSync(path, fs.readFileSync(path, 'utf-8').replace(
       'viewBox="0 0 20 20"',
-      'viewBox="2.5 2.5 15 15"'
+      'viewBox="2 2 16 16"'
     ))
   }
   return result
