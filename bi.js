@@ -5,7 +5,8 @@ const styles = fs.readdirSync(dir).filter(name => {
   let result = name.endsWith('.svg')
   if (result) {
     let path = `${dir}/${name}`
-    fs.writeFileSync(path, fs.readFileSync(path, 'utf-8').replace(
+    let content = fs.readFileSync(path, 'utf-8')
+    if (content.includes('width="16" height="16"')) fs.writeFileSync(path, content.replace(
       ` width="16" height="16" fill="currentColor" class="bi bi-${name.slice(0, -4)}"`,
       ''
     ))
