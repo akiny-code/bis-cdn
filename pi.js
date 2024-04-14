@@ -1,5 +1,5 @@
 const fs = require('fs')
-const dir = process.argv[2] ?? 'polaris-icons-9'
+const dir = process.argv[2] ?? 'pi'
 
 const styles = fs.readdirSync(dir).filter(name => {
   let result = name.endsWith('.svg')
@@ -16,7 +16,12 @@ const styles = fs.readdirSync(dir).filter(name => {
 -webkit-mask-image: url(${name});
 mask-image: url(${name});
 }`)
-fs.writeFileSync(dir + '/style.css', `.pi{
+fs.writeFileSync(dir + '/style.css', `/*!
+* @shopify/polaris-icons 9.0.0 (https://polaris-icons.shopify.com)
+* Copyright (c) 2017-present Shopify Inc.
+* Licensed under MIT (https://unpkg.com/browse/@shopify/polaris-icons@9.0.0/LICENSE.md)
+*/
+.pi{
 -webkit-mask-position: center;
 mask-position: center;
 -webkit-mask-repeat: no-repeat;
@@ -28,7 +33,7 @@ content: "\\25A2";
 background: currentColor;
 line-height: 1;
 font-family: serif;
-font-style: normal;
+font-style: normal !important;
 }
 ${styles.join('\n')}
 `)
