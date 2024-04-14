@@ -20,12 +20,8 @@ fs.writeFileSync(dir + '/style.css', `/*!
 * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
 */
 .bi{
--webkit-mask-image: var(--i);
-mask-image: var(--i);
--webkit-mask-position: center;
-mask-position: center;
--webkit-mask-repeat: no-repeat;
-mask-repeat: no-repeat;
+-webkit-mask: var(--i) center no-repeat;
+mask: var(--i) center no-repeat;
 display: inline-block;
 }
 .bi::before {
